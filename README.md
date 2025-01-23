@@ -49,7 +49,8 @@ salloc: Relinquishing job allocation 746174
 ## Optimization
 
 ### Tensor Structure
-![Image](https://github.com/user-attachments/assets/20d750cf-60b2-4341-a821-5ff7e216c711)
+![image](https://github.com/user-attachments/assets/80e0f913-f840-4e52-b399-f36d5431ad4d)
+
 - **Initial Issue**: Nsight 프로파일링 결과, 불필요한 host-to-device 메모리 전송이 자주 발생하는 것을 확인.
 - **Solution**: Tensor 구조체의 `buf`를 device 상에 유지하도록 설계하여, 불필요한 메모리 전송 제거 및 성능 향상.<br><br>
   ```C
